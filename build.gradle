@@ -1,14 +1,11 @@
 plugins {
     id 'java'
     id 'io.izzel.taboolib' version '1.3'
-    id 'org.jetbrains.kotlin.jvm' version '1.4.0'
+    id 'org.jetbrains.kotlin.jvm' version '1.4.21'
 }
 
 group = 'io.izzel.taboolib.example'
 version = '1.0.0'
-
-sourceCompatibility = '1.8'
-targetCompatibility = '1.8'
 
 taboolib {
     tabooLibVersion = '5.55'
@@ -37,17 +34,5 @@ processResources {
                 libVersion: taboolib.tabooLibVersion,
                 loaderVersion: taboolib.loaderVersion
         )
-    }
-}
-
-compileKotlin {
-    kotlinOptions {
-        jvmTarget = "1.8"
-    }
-}
-
-compileTestKotlin {
-    kotlinOptions {
-        jvmTarget = "1.8"
     }
 }
